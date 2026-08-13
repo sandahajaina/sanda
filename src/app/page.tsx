@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { Pill } from "@/components/Pill";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans ">
+      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white sm:items-start">
         <Image
           className="dark:invert h-5 w-[100px]"
           src="/next.svg"
@@ -20,6 +21,9 @@ export default function Home() {
             </code>{" "}
             file.
           </h1>
+          <Pill label="neutre" variant="neutral"/>
+          <Pill label="bleu" variant="accent"/>
+          <Pill label="black" variant="black"/>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a
