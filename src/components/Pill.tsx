@@ -12,7 +12,7 @@ const variantClasses = {
 
 export function Pill({label, variant}: PillProps) {
     return (
-        <span className={`inline-flex px-4 py-2 text-sm font-medium ${variantClasses[variant]}`}>
+        <span className={`inline-flex px-1 py-1 text-sm font-medium ${variantClasses[variant]}`}>
             {label}
         </span>
     )
