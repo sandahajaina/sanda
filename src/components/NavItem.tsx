@@ -2,22 +2,27 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LucideIcon } from "lucide-react";
 
 interface NavItemProps {
     href: string;
     label: string;
     number: string;
-    icon: LucideIcon;
+    icon: React.ReactNode;
 }
 
-export function NavItem({href, label, number, icon: Icon}: NavItemProps) {
+export function NavItem({href, label, number, icon}: NavItemProps) {
     
     const pathname = usePathname();
+    const isActive = pathname === href;
     
     return (
-        <span className="">
-            <Icon size={10}/>
-        </span>
+        <Link href={href} className={isActive ? "-translate-x-[4px]" : ""}>
+            <span className={`flex items-center gap-3 pl-4 
+                ${isActive ? "border-l-4 border-black" : "border-l border-secondary"}`}>
+                <span>{icon}</span>
+                <span>{ number }</span>
+                <span className="uppercase">{label}</span>
+            </span>
+        </Link>
     );
 }
