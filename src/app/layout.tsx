@@ -17,7 +17,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sanda Hajaina, Software Engineer",
-  description: "Portfolio of Sanda Hajaina — 42 Antananarivo, Web & Mobile. C/C++ systems background, now building full-stack products. Open to junior roles.",
+  description: `Portfolio of Sanda Hajaina — 42 Antananarivo, 
+  Web & Mobile. C/C++ systems background, now building 
+  full-stack products. Open to junior roles.`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -30,12 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <div className="flex flex-1 overflow-hidden">
           <Sidebar />
-          <main className="flex-1 overflow-y-auto
-            min-h-screen
-    bg-[#fafaf9]
-    bg-[linear-gradient(to_right,#e5e5e5_1px,transparent_1px),linear-gradient(to_bottom,#e5e5e5_1px,transparent_1px)]
-    bg-[size:20px_20px]
-          ">
+          <main className="flex-1 overflow-y-auto grid-background">
             {children}
           </main>
         </div>
