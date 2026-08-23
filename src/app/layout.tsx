@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <div className="flex flex-1 overflow-hidden">
           <Sidebar />
-          <main className="flex-1 overflow-y-auto grid-background">
+          <main className="flex-1 flex items-center overflow-y-auto grid-background">
             {children}
           </main>
         </div>

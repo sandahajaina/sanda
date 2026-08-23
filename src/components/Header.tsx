@@ -6,7 +6,7 @@ export function Header() {
     return (
         <header className="flex justify-between items-center border-b border-secondary/20 px-6 py-2">
             <h1 className="text-heading">{NAME}</h1>
-            <span className="text-meta">{ROLE}</span>
+            <span className="text-meta uppercase">{ROLE}</span>
             <span className="text-meta">{LOCATION}</span>
         </header>
     )
