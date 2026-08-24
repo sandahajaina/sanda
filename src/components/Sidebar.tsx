@@ -10,7 +10,7 @@ const sections = [
 
 export function Sidebar() {
   return (
-    <aside className='flex flex-col border-r border-secondary/20 px-5 py-5'>
+    <aside className='flex font-mono flex-col border-r border-secondary/20 px-5 py-5'>
       <nav className='flex flex-col gap-4'>
         {sections.map((section) => (
           <NavItem key={section.href} {...section} />
