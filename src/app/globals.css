@@ -38,6 +38,8 @@
   --text-heading--font-weight: 700;
 
   --text-body: 16px;
+
+  --container-content: 1000px;
 }
 
 body {
