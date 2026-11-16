@@ -1,5 +1,5 @@
 import { FolderCheck, User, Layers2, BriefcaseBusiness } from 'lucide-react';
-import { NavItem } from "./NavItem";
+import { NavItem } from "@/components/NavItem";
 
 const sections = [
   { href: "/", label: "Profile", number: "01", icon: <User size={16}/> },
@@ -10,7 +10,7 @@ const sections = [
 
 export function Sidebar() {
   return (
-    <aside className='flex font-mono flex-col border-r border-secondary/20 px-5 py-5'>
+    <aside className='flex font-mono flex-col border-r border-border px-5 py-5'>
       <nav className='flex flex-col gap-4'>
         {sections.map((section) => (
           <NavItem key={section.href} {...section} />

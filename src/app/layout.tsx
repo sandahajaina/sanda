@@ -18,9 +18,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Sanda Hajaina, Software Engineer",
-  description: `Portfolio of Sanda Hajaina — 42 Antananarivo, 
-  Web & Mobile. C/C++ systems background, now building 
-  full-stack products. Open to junior roles.`,
+  description:
+    "Portfolio of Sanda Hajaina — 42 Antananarivo, Web & Mobile. C/C++ systems background, now building full-stack products. Open to junior roles.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -4,15 +4,15 @@ interface PillProps {
 }
 
 const variantClasses = {
-        neutral: "border border-black text-foreground",
-        black: "bg-foreground text-white",
+        neutral: "border border-foreground text-foreground",
+        black: "bg-foreground text-surface",
         accent: "border border-accent text-accent",
     }
 
 
 export function Pill({label, variant}: PillProps) {
     return (
-        <span className={`inline-flex bg-background font-mono px-1 py-1 text-sm font-medium ${variantClasses[variant]}`}>
+        <span className={`inline-flex bg-background font-mono px-1 py-1 text-label ${variantClasses[variant]}`}>
             {label}
         </span>
     )
