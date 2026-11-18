@@ -4,6 +4,7 @@ import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MaintenanceMode } from "@/components/MaintenanceMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,16 +30,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="flex flex-col h-screen">
-        <Header />
-        <div className="flex flex-1 overflow-hidden">
-          <Sidebar />
-          <main className="flex-1 overflow-y-auto grid-background">
-            <div className="max-w-content mx-auto w-full px-6">
-              {children}
-            </div>
-          </main>
-        </div>
-        <Footer />
+        <MaintenanceMode>
+          <Header />
+          <div className="flex flex-1 overflow-hidden">
+            <Sidebar />
+            <main className="flex-1 overflow-y-auto grid-background">
+              <div className="max-w-content mx-auto w-full px-6">
+                {children}
+              </div>
+            </main>
+          </div>
+          <Footer />
+        </MaintenanceMode>
       </body>
     </html>
   );
